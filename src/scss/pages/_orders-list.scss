@@ -1,0 +1,50 @@
+.orders-list-table {
+	min-width: max-content;
+	word-break: keep-all;
+	border-radius: 10px;
+	overflow: hidden;
+	& > :not(:last-child) > :last-child > * {
+		border-bottom-color: transparent;
+	}
+	thead,
+	tbody {
+		tr > * {
+			vertical-align: middle;
+		}
+		tr {
+			& > :first-child {
+				padding-right: 1.5rem;
+			}
+			& > :last-child {
+				padding-left: 1.5rem;
+			}
+		}
+	}
+	thead {
+		background: #f3f3f3;
+	}
+	tbody {
+		background: #fff;
+		tr > * {
+			color: #4a4747;
+		}
+	}
+
+	.badges-box {
+		& > :not(:last-child) {
+			margin-left: 1rem;
+		}
+		.badge-outline {
+			border: 1px solid #cfcfcf;
+			border-radius: 8px;
+			padding: 4px 12px;
+			color: #656565;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.badge-outline img {
+			width: 30px;
+		}
+	}
+}

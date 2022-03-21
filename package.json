@@ -1,0 +1,24 @@
+{
+    "name": "gulp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "lite-server --baseDir=\"./dist\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.46.0"
+    },
+    "dependencies": {
+        "graceful-fs": "4.2.2",
+        "lite-server": "^2.6.1"
+    }
+}

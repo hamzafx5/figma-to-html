@@ -1,0 +1,73 @@
+@use "./variables" as var;
+
+@mixin for-up($size) {
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin for-down($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin for-phone-down {
+	@media (max-width: var.$sm) {
+		@content;
+	}
+}
+
+@mixin for-phone-up {
+	@media (min-width: var.$sm) {
+		@content;
+	}
+}
+
+@mixin for-tablet-down {
+	@media (max-width: var.$md) {
+		@content;
+	}
+}
+
+@mixin for-tablet-up {
+	@media (min-width: var.$md) {
+		@content;
+	}
+}
+
+@mixin for-laptop-down {
+	@media (max-width: var.$lg) {
+		@content;
+	}
+}
+
+@mixin for-laptop-up {
+	@media (min-width: var.$lg) {
+		@content;
+	}
+}
+
+@mixin for-desktop-down {
+	@media (max-width: var.$xl) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: var.$xl) {
+		@content;
+	}
+}
+
+@mixin for-desktop-xxl-down {
+	@media (max-width: var.$xxl) {
+		@content;
+	}
+}
+
+@mixin for-desktop-xxl-up {
+	@media (min-width: var.$xxl) {
+		@content;
+	}
+}

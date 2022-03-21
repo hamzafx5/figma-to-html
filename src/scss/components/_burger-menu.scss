@@ -1,0 +1,53 @@
+@use "../helpers/mixins" as *;
+
+.burger-menu {
+	display: none;
+	@include for-down(970px) {
+		z-index: 10;
+		display: block;
+	}
+	flex-shrink: 0;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	&.open {
+		div {
+			background: transparent;
+		}
+		div::before {
+			transform: rotate(-45deg);
+		}
+		div::after {
+			width: 32px;
+			transform: rotate(45deg);
+		}
+	}
+	div {
+		position: absolute;
+		top: calc(50% - 1px);
+		left: 0;
+		width: 26px;
+		height: 2px;
+		border-radius: 2px;
+		background: currentColor;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			height: 2px;
+			border-radius: 2px;
+			background: currentColor;
+			transition: 300ms ease-out;
+		}
+		&::before {
+			transform: translateY(-10px);
+			width: 32px;
+		}
+		&::after {
+			width: 20px;
+			transform: translateY(10px);
+		}
+	}
+}

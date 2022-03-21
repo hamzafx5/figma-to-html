@@ -1,0 +1,46 @@
+@use "../helpers/variables" as var;
+
+.button {
+	display: inline-block;
+	user-select: none;
+	border: none;
+	font: inherit;
+	line-height: 1.2em;
+	background-color: var.$primary-clr;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	vertical-align: auto;
+	width: max-content;
+	height: max-content;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.button > img {
+	width: 20px;
+}
+
+.button-outline {
+	background: var.$nav-bg;
+	border: 1px solid var.$primary-clr;
+	color: var.$primary-clr;
+}
+
+.button-outline.button-disabled {
+	border-color: #cfcfcf;
+	color: #cfcfcf;
+	pointer-events: none;
+}
+
+.button-success {
+	background: #dffff2;
+	color: #5db188;
+}
+
+.button-danger {
+	background: #fbe9e9;
+	color: #a65151;
+}
