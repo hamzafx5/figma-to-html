@@ -9,7 +9,7 @@ task("scss", async () => {
 	return src("./src/scss/style.scss")
 		.pipe(sass().on("error", sass.logError))
 		.pipe(autoprefixer("last 10 versions"))
-		.pipe(dest("./dist/css"));
+		.pipe(dest("./dist/assets/css"));
 });
 
 // Javascript task

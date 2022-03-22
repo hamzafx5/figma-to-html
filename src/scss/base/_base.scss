@@ -1,11 +1,5 @@
 @use "../helpers/variables" as var;
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 ::-webkit-scrollbar {
 	width: 12px;
 	height: 12px;
@@ -35,7 +29,21 @@ body {
 	font-family: "DIN NEXTTM ARABIC", sans-serif;
 }
 
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+	margin-bottom: 0.7em;
+	color: #000;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.link {
+	color: var.$primary-clr;
 }

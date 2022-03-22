@@ -23,10 +23,19 @@
 	width: 20px;
 }
 
+.button-lg {
+	padding: 13px 24px;
+}
+
 .button-outline {
 	background: var.$nav-bg;
 	border: 1px solid var.$primary-clr;
 	color: var.$primary-clr;
+}
+
+.button-gray {
+	background: #cfcfcf;
+	color: #fff;
 }
 
 .button-outline.button-disabled {

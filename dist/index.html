@@ -3,38 +3,62 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="./css/bootstrap.rtl.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<script defer src="./js/app.js"></script>
-		<title>Orders list page</title>
+		<link rel="stylesheet" href="./assets/css/bootstrap-reboot.rtl.min.css" />
+		<link rel="stylesheet" href="./assets/css/bootstrap-grid.rtl.min.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script defer src="./assets/js/app.js"></script>
+		<title>sing up</title>
 	</head>
 	<body>
+		<!-- select location module -->
+		<div class="module-box select-location-module">
+			<div class="module-content-box">
+				<div class="close-module-btn">
+					<img src="./assets/icons/x.svg" alt="close icon" />
+				</div>
+				<!-- content -->
+				<div class="map-box">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463876.9397043577!2d46.54233657557407!3d24.72555534712375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sma!4v1647958956527!5m2!1sen!2sma"
+						width="100%"
+						height="100%"
+						style="border: 0"
+						allowfullscreen="true"
+						loading="lazy"
+					></iframe>
+				</div>
+				<div class="btn-box">
+					<button class="button button-gray">إلغاء</button>
+					<button class="button">حفض</button>
+				</div>
+			</div>
+		</div>
+
 		<!-- Start Navigation -->
 		<nav class="nav">
 			<a href="/" class="logo">
-				<img src="./icons/logo.svg" alt="logo" />
+				<img src="./assets/icons/logo.svg" alt="logo" />
 			</a>
 			<div class="menu-container">
 				<ul class="links">
 					<li>
-						<a href="#"><img src="./icons/home-icon.svg" /> الرئيسة</a>
+						<a href="#"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
 					</li>
 					<li>
-						<a href="#"><img src="./icons/product-icon.svg" /> المنتجات</a>
+						<a href="#"><img src="./assets/icons/product-icon.svg" /> المنتجات</a>
 					</li>
 					<li>
-						<a href="#" class="active"><img src="./icons/orders-icon.svg" /> الطلبات</a>
+						<a href="#"><img src="./assets/icons/orders-icon.svg" /> الطلبات</a>
 					</li>
 					<li>
-						<a href="#"><img src="./icons/shoping-card-icon.svg" /> عربة التسوق</a>
+						<a href="#"><img src="./assets/icons/orders-icon.svg" /> عربة التسوق</a>
 					</li>
 				</ul>
-				<button class="button"><img class="me-2" src="./icons/user-icons.svg" />هشام محمد</button>
 			</div>
 			<!-- <div class="divider"></div> -->
 			<div class="select-lang nav-lang">
 				<div class="selected-lang">
-					<img src="./icons/globe-icon.svg" alt="globe icon" />
+					<img src="./assets/icons/globe-icon.svg" alt="globe icon" />
 					<span>Arabic</span>
 				</div>
 				<ul class="lang-options">
@@ -49,260 +73,118 @@
 		</nav>
 		<!-- End Navigation -->
 
-		<div class="container-xl">
-			<div class="my-5">
-				<div class="button button-outline me-3">مكتمل</div>
-				<div class="button button-outline button-disabled">قيد التنفيذ</div>
+		<!-- Start sign up form -->
+		<div class="signup-form-wrapper">
+			<h1>إنضم الينا</h1>
+			<p class="sub-title">ابدأ بالتسوق وانت في مكانك</p>
+			<div class="container-md">
+				<form>
+					<!-- Company Name -->
+					<div class="input-group">
+						<label>اسم الشركة<span style="color: red"> * </span></label>
+						<div class="input-icon" id="company-name">
+							<input type="text" placeholder="ادخل اسم الشركتك" required />
+							<img src="./assets/icons/company.svg" alt="icon" />
+						</div>
+					</div>
+					<!-- Email -->
+					<div class="input-group">
+						<label>البريد الإلكترونى <span style="color: red"> * </span></label>
+						<div class="input-icon" id="email">
+							<input type="email" placeholder="البريدك الإلكترونى" required />
+							<img src="./assets/icons/email.svg" alt="icon" />
+						</div>
+					</div>
+					<!-- Phone number -->
+					<div class="input-group">
+						<label>رقم الجوال <span style="color: red"> * </span></label>
+						<div class="input-icon" id="phone">
+							<input class="drop-down" type="text" placeholder="رقم جوالك" required />
+							<img src="./assets/icons/phone.svg" alt="icon" />
+							<div class="input-drop-down">
+								<div class="selected-item">
+									<span>966</span>
+									<img src="./assets/icons/down-arrow.svg" alt="down arrow" />
+								</div>
+								<ul>
+									<li>966</li>
+									<li>998</li>
+									<li>897</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Client location -->
+					<div class="input-group">
+						<label>المنطقة <span style="color: red"> * </span></label>
+						<div class="input-icon" id="location">
+							<input type="text" placeholder="منطقتك" />
+							<img src="./assets/icons/location.svg" alt="icon" />
+							<button type="button" class="input-button open-map-to-select-location">
+								انقر لإختيار المنطقة
+							</button>
+						</div>
+					</div>
+					<!-- Password -->
+					<div class="input-group">
+						<label>كلمة المرور <span style="color: red"> * </span></label>
+						<div class="input-icon" id="password">
+							<input type="password" id="pass" placeholder="كلمة المرور" />
+							<img src="./assets/icons/lock.svg" alt="icon" />
+							<img
+								data-target="#pass"
+								class="show-and-hide-pass"
+								src="./assets/icons/eye.svg"
+								alt="icon"
+							/>
+						</div>
+					</div>
+					<!-- Confirm Password -->
+					<div class="input-group">
+						<label>أعد كتابة كلمة المرور <span style="color: red"> * </span></label>
+						<div class="input-icon" id="password">
+							<input type="password" id="confirm-pass" placeholder="أعد كتابة كلمة المرور" />
+							<img src="./assets/icons/lock.svg" alt="icon" />
+							<img
+								data-target="#confirm-pass"
+								class="show-and-hide-pass"
+								src="./assets/icons/eye.svg"
+								alt="icon"
+							/>
+						</div>
+					</div>
+					<!-- Add file -->
+					<div class="input-group input-file">
+						<label>السجل التجاري</label>
+						<div class="input-icon">
+							<input type="file" />
+							<img src="./assets/icons/file.svg" alt="icon" />
+							<span class="file-input-label">لم يتم اخيار اي ملف</span>
+							<button type="button" class="input-button browse-files-btn">أختر ملف</button>
+						</div>
+					</div>
+					<!-- Add file -->
+					<div class="input-group input-file">
+						<label>إتفاقية الإستخدام</label>
+						<div class="input-icon">
+							<input type="file" />
+							<img src="./assets/icons/file.svg" alt="icon" />
+							<span class="file-input-label">لم يتم اخيار اي ملف</span>
+							<button type="button" class="input-button browse-files-btn">أختر ملف</button>
+						</div>
+					</div>
+					<div class="submit-btn-box">
+						<button class="button button-lg">تسجيل الدخو</button>
+						<p>
+							لديك حساب بالفعل?
+							<a href="login.html" class="link">قم بتسجيل الدخو </a>
+						</p>
+					</div>
+				</form>
 			</div>
-			<!-- Start Orders table -->
-			<div class="table-responsive-lg mb-5">
-				<table class="table orders-list-table">
-					<thead>
-						<tr>
-							<th scope="col">رقم الطلب</th>
-							<th scope="col">المنتجات</th>
-							<th scope="col">تاريخ الطلب</th>
-							<th scope="col">الفرع</th>
-							<th scope="col">حالة الطلب</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-success me-3">تم التوصيل</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>15#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>لحوم الطازج</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-danger me-3">تم الإلغائ</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>45#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>لحوم الطازج</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-success me-3">تم التوصيل</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>33#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-danger me-3">تم الإلغائ</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>13#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-success me-3">تم التوصيل</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>11#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-danger me-3">تم الإلغائ</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>19#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-success me-3">تم التوصيل</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>10#</td>
-							<td>
-								<div class="d-flex badges-box">
-									<div class="badge-outline">
-										<img src="./img/pineapple.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/strawberry.png" alt="fruit" />
-									</div>
-									<div class="badge-outline">
-										<img src="./img/meet.png" alt="meet" />
-									</div>
-									<div class="badge-outline">+3</div>
-									<div class="badge-outline">عرض الطلب</div>
-								</div>
-							</td>
-							<td>2022/18/17</td>
-							<td>مأكولات بحرية</td>
-							<td>
-								<div class="d-flex">
-									<button class="button button-danger me-3">تم الإلغائ</button>
-									<button class="button">
-										إعادة الطلب
-										<img class="ms-1" src="./icons/reorder-icon.svg" />
-									</button>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- Start Orders table -->
+			<!-- floating vector -->
+			<img class="top-right-vector" src="./assets/icons/bg-vector.svg" alt="" />
 		</div>
+		<!-- End sign up form -->
 	</body>
 </html>

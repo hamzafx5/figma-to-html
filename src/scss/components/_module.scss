@@ -1,0 +1,42 @@
+@use "../helpers/mixins" as *;
+
+.module-box {
+	width: 100vw;
+	height: 100vh !important;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 1rem;
+	display: none;
+	place-items: center;
+	@include for-tablet-up {
+		padding: 2rem;
+	}
+	&.open {
+		display: grid;
+	}
+	.module-content-box {
+		position: relative;
+		width: 100%;
+		max-width: 650px;
+		min-height: 200px;
+		border-radius: 10px;
+		padding: 1rem;
+		height: auto;
+		background: #fff;
+		.close-module-btn {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			cursor: pointer;
+			background: lighten($color: red, $amount: 40%);
+			border-radius: 50%;
+			width: 26px;
+			height: 26px;
+			display: grid;
+			place-items: center;
+		}
+	}
+}
