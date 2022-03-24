@@ -5,17 +5,38 @@ function get(selector, all = false) {
 	return document.querySelector(selector);
 }
 
+// Help method to add events easier
 Object.prototype.on = function (event, cb) {
 	this.addEventListener(event, cb);
 	return this;
 };
 
+// css method for adding inline style faster for example
+/*
+	element.css({
+		color: "#ffd900",
+		width: "100px"
+	})
+*/
 Object.prototype.css = function (styles) {
 	for (let [property, value] of Object.entries(styles)) {
 		this.style[property] = value;
 	}
 	return this;
 };
+
+// Debounce function to help as avoid unnecessary events firing
+function debounce(func, delay) {
+	let timeoutId;
+	return function (...args) {
+		if (timeoutId) {
+			clearTimeout(timeoutId);
+		}
+		timeoutId = setTimeout(() => {
+			func(...args);
+		}, delay);
+	};
+}
 
 // Open and close menu
 const toggleMenuBtn = get(".burger-menu");
@@ -43,56 +64,30 @@ selectLang.on("click", (e) => {
 	selectLang.classList.toggle("open");
 });
 
-// Open input drop down list
-get(".input-drop-down").on("click", (e) => {
-	e.currentTarget.classList.toggle("active");
-	const selectedItem = get(".input-drop-down .selected-item span");
-	if (e.target.tagName === "LI") {
-		selectedItem.innerText = e.target.innerText;
-	}
-});
-
-// Select location module
-const locationModule = get(".select-location-module");
-const closeLocationModuleBtn = locationModule.querySelector(".close-module-btn");
-const openLocationModuleBtn = get(".open-map-to-select-location");
-
-openLocationModuleBtn.on("click", () => {
-	locationModule.classList.add("open");
-});
-
-closeLocationModuleBtn.on("click", () => {
-	locationModule.classList.remove("open");
-});
+// Hide the placeholder when the input is focused
+function hidePlaceholder() {
+	get("input[placeholder]", true).forEach((input) => {
+		const placeholder = input.getAttribute("placeholder");
+		input.on("focus", () => {
+			input.setAttribute("placeholder", "");
+		});
+		input.on("blur", () => {
+			input.setAttribute("placeholder", placeholder);
+		});
+	});
+}
 
 // Show and hide password
-get(".show-and-hide-pass", true).forEach((el) => {
-	el.on("click", (e) => {
-		const targetInput = get(e.currentTarget.dataset.target);
-		const currentType = targetInput.getAttribute("type");
-		const type = currentType === "password" ? "text" : "password";
-		targetInput.setAttribute("type", type);
+function showAndHidePass() {
+	get(".show-and-hide-pass", true).forEach((el) => {
+		el.on("click", (e) => {
+			const targetInput = get(e.currentTarget.dataset.target);
+			const currentType = targetInput.getAttribute("type");
+			const type = currentType === "password" ? "text" : "password";
+			targetInput.setAttribute("type", type);
+		});
 	});
-});
-
-// add file inputs
-get(".input-file", true).forEach((el) => {
-	const input = el.querySelector(".input-icon input");
-	const fileInputLabel = el.querySelector(".file-input-label");
-	const browseBtn = el.querySelector(".browse-files-btn");
-	browseBtn.on("click", () => {
-		input.click();
-	});
-
-	input.on("change", (e) => {
-		const [file] = e.target.files;
-		if (!file) return;
-		fileInputLabel.innerText = file.name;
-		if (input.value) {
-			el.classList.add("file-selected");
-		}
-	});
-});
+}
 
 function reversStr(str) {
 	let revStr = "";

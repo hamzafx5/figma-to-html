@@ -31,6 +31,9 @@
 			&:focus {
 				border-color: var.$primary-clr;
 			}
+			&.has-errors {
+				border-color: #f31313;
+			}
 		}
 		input[type="email"] {
 			direction: rtl !important;
@@ -117,6 +120,18 @@
 			&.active ul {
 				display: block;
 			}
+		}
+	}
+
+	.input-icon .error-box {
+		display: none;
+		position: absolute;
+		top: 110%;
+		right: 0;
+		font-size: 90%;
+		color: #f31313;
+		&.input-has-errors {
+			display: block;
 		}
 	}
 

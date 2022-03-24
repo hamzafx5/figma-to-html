@@ -1,0 +1,2 @@
+showAndHidePass();
+hidePlaceholder();

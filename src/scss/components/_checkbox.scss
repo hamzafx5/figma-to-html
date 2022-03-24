@@ -1,0 +1,51 @@
+@use "../helpers/variables" as var;
+
+.checkbox-group {
+	display: flex;
+	align-items: center;
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	input[type="checkbox"] + label {
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 20px;
+		user-select: none;
+	}
+
+	input[type="checkbox"] + label:last-child {
+		margin-bottom: 0;
+	}
+
+	input[type="checkbox"] + label:before {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 4px;
+		cursor: pointer;
+		border: 2px solid gray;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.6;
+		transition: all 0.12s, border-color 0.08s;
+	}
+
+	input[type="checkbox"]:checked + label:before {
+		width: 10px;
+		top: 2px;
+		left: 5px;
+		border-radius: 0;
+		opacity: 1;
+		border-color: var.$primary-clr;
+		border-radius: 0;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		transform: rotate(45deg);
+	}
+}

@@ -3,10 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="./assets/css/bootstrap-reboot.rtl.min.css" />
-		<link rel="stylesheet" href="./assets/css/bootstrap-grid.rtl.min.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<script defer src="./assets/js/app.js"></script>
+		<script defer src="./assets/js/singup.js"></script>
 		<title>sing up</title>
 	</head>
 	<body>
@@ -51,11 +50,10 @@
 						<a href="#"><img src="./assets/icons/orders-icon.svg" /> الطلبات</a>
 					</li>
 					<li>
-						<a href="#"><img src="./assets/icons/orders-icon.svg" /> عربة التسوق</a>
+						<a href="#"><img src="./assets/icons/shoping-card-icon.svg" /> عربة التسوق</a>
 					</li>
 				</ul>
 			</div>
-			<!-- <div class="divider"></div> -->
 			<div class="select-lang nav-lang">
 				<div class="selected-lang">
 					<img src="./assets/icons/globe-icon.svg" alt="globe icon" />
@@ -77,113 +75,108 @@
 		<div class="signup-form-wrapper">
 			<h1>إنضم الينا</h1>
 			<p class="sub-title">ابدأ بالتسوق وانت في مكانك</p>
-			<div class="container-md">
-				<form>
-					<!-- Company Name -->
-					<div class="input-group">
-						<label>اسم الشركة<span style="color: red"> * </span></label>
-						<div class="input-icon" id="company-name">
-							<input type="text" placeholder="ادخل اسم الشركتك" required />
-							<img src="./assets/icons/company.svg" alt="icon" />
-						</div>
+			<form>
+				<!-- Company Name -->
+				<div class="input-group">
+					<label>اسم الشركة<span style="color: red"> * </span></label>
+					<div class="input-icon" id="company-name">
+						<input type="text" placeholder="ادخل اسم الشركتك" required />
+						<img src="./assets/icons/company.svg" alt="icon" />
 					</div>
-					<!-- Email -->
-					<div class="input-group">
-						<label>البريد الإلكترونى <span style="color: red"> * </span></label>
-						<div class="input-icon" id="email">
-							<input type="email" placeholder="البريدك الإلكترونى" required />
-							<img src="./assets/icons/email.svg" alt="icon" />
-						</div>
+				</div>
+				<!-- Email -->
+				<div class="input-group">
+					<label>البريد الإلكترونى <span style="color: red"> * </span></label>
+					<div class="input-icon" id="email">
+						<input type="email" placeholder="البريدك الإلكترونى" required />
+						<img src="./assets/icons/email.svg" alt="icon" />
 					</div>
-					<!-- Phone number -->
-					<div class="input-group">
-						<label>رقم الجوال <span style="color: red"> * </span></label>
-						<div class="input-icon" id="phone">
-							<input class="drop-down" type="text" placeholder="رقم جوالك" required />
-							<img src="./assets/icons/phone.svg" alt="icon" />
-							<div class="input-drop-down">
-								<div class="selected-item">
-									<span>966</span>
-									<img src="./assets/icons/down-arrow.svg" alt="down arrow" />
-								</div>
-								<ul>
-									<li>966</li>
-									<li>998</li>
-									<li>897</li>
-								</ul>
+				</div>
+				<!-- Phone number -->
+				<div class="input-group">
+					<label>رقم الجوال <span style="color: red"> * </span></label>
+					<div class="input-icon" id="phone">
+						<input class="drop-down" type="text" placeholder="رقم جوالك" required />
+						<img src="./assets/icons/phone.svg" alt="icon" />
+						<div class="input-drop-down">
+							<div class="selected-item">
+								<span>966</span>
+								<img src="./assets/icons/down-arrow.svg" alt="down arrow" />
 							</div>
+							<ul>
+								<li>966</li>
+								<li>998</li>
+								<li>897</li>
+							</ul>
 						</div>
 					</div>
-					<!-- Client location -->
-					<div class="input-group">
-						<label>المنطقة <span style="color: red"> * </span></label>
-						<div class="input-icon" id="location">
-							<input type="text" placeholder="منطقتك" />
-							<img src="./assets/icons/location.svg" alt="icon" />
-							<button type="button" class="input-button open-map-to-select-location">
-								انقر لإختيار المنطقة
-							</button>
-						</div>
+				</div>
+				<!-- Client location -->
+				<div class="input-group">
+					<label>المنطقة <span style="color: red"> * </span></label>
+					<div class="input-icon" id="location">
+						<input type="text" placeholder="منطقتك" />
+						<img src="./assets/icons/location.svg" alt="icon" />
+						<button type="button" class="input-button open-map-to-select-location">
+							انقر لإختيار المنطقة
+						</button>
 					</div>
-					<!-- Password -->
-					<div class="input-group">
-						<label>كلمة المرور <span style="color: red"> * </span></label>
-						<div class="input-icon" id="password">
-							<input type="password" id="pass" placeholder="كلمة المرور" />
-							<img src="./assets/icons/lock.svg" alt="icon" />
-							<img
-								data-target="#pass"
-								class="show-and-hide-pass"
-								src="./assets/icons/eye.svg"
-								alt="icon"
-							/>
-						</div>
+				</div>
+				<!-- Password -->
+				<div class="input-group">
+					<label>كلمة المرور <span style="color: red"> * </span></label>
+					<div class="input-icon" id="password">
+						<input type="password" id="pass" placeholder="كلمة المرور" />
+						<img src="./assets/icons/lock.svg" alt="icon" />
+						<img data-target="#pass" class="show-and-hide-pass" src="./assets/icons/eye.svg" alt="icon" />
 					</div>
-					<!-- Confirm Password -->
-					<div class="input-group">
-						<label>أعد كتابة كلمة المرور <span style="color: red"> * </span></label>
-						<div class="input-icon" id="password">
-							<input type="password" id="confirm-pass" placeholder="أعد كتابة كلمة المرور" />
-							<img src="./assets/icons/lock.svg" alt="icon" />
-							<img
-								data-target="#confirm-pass"
-								class="show-and-hide-pass"
-								src="./assets/icons/eye.svg"
-								alt="icon"
-							/>
-						</div>
+				</div>
+				<!-- Confirm Password -->
+				<div class="input-group">
+					<label>أعد كتابة كلمة المرور <span style="color: red"> * </span></label>
+					<div class="input-icon" id="password">
+						<input type="password" id="confirm-pass" placeholder="أعد كتابة كلمة المرور" />
+						<img src="./assets/icons/lock.svg" alt="icon" />
+						<img
+							data-target="#confirm-pass"
+							class="show-and-hide-pass"
+							src="./assets/icons/eye.svg"
+							alt="icon"
+						/>
+						<div id="confirm-pass-errors" class="error-box">عدرآ كلمة المرور غير متطابقة</div>
 					</div>
-					<!-- Add file -->
-					<div class="input-group input-file">
-						<label>السجل التجاري</label>
-						<div class="input-icon">
-							<input type="file" />
-							<img src="./assets/icons/file.svg" alt="icon" />
-							<span class="file-input-label">لم يتم اخيار اي ملف</span>
-							<button type="button" class="input-button browse-files-btn">أختر ملف</button>
-						</div>
+				</div>
+				<!-- Add file -->
+				<div class="input-group input-file">
+					<label>السجل التجاري</label>
+					<div class="input-icon">
+						<input type="file" />
+						<img src="./assets/icons/file.svg" alt="icon" />
+						<span class="file-input-label">لم يتم اخيار اي ملف</span>
+						<button type="button" class="input-button browse-files-btn">أختر ملف</button>
 					</div>
-					<!-- Add file -->
-					<div class="input-group input-file">
-						<label>إتفاقية الإستخدام</label>
-						<div class="input-icon">
-							<input type="file" />
-							<img src="./assets/icons/file.svg" alt="icon" />
-							<span class="file-input-label">لم يتم اخيار اي ملف</span>
-							<button type="button" class="input-button browse-files-btn">أختر ملف</button>
-						</div>
+				</div>
+				<!-- Add file -->
+				<div class="input-group input-file">
+					<label>إتفاقية الإستخدام</label>
+					<div class="input-icon">
+						<input type="file" />
+						<img src="./assets/icons/file.svg" alt="icon" />
+						<span class="file-input-label">لم يتم اخيار اي ملف</span>
+						<button type="button" class="input-button browse-files-btn">أختر ملف</button>
 					</div>
-					<div class="submit-btn-box">
-						<button class="button button-lg">تسجيل الدخو</button>
-						<p>
-							لديك حساب بالفعل?
-							<a href="login.html" class="link">قم بتسجيل الدخو </a>
-						</p>
-					</div>
-				</form>
-			</div>
-			<!-- floating vector -->
+				</div>
+				<div class="submit-btn-box">
+					<button class="button button-lg">تسجيل الدخو</button>
+					<p>
+						لديك حساب بالفعل?
+						<a href="login.html" class="link">قم بتسجيل الدخو </a>
+					</p>
+				</div>
+			</form>
+			<!-- floating vectors -->
 			<img class="top-right-vector" src="./assets/icons/bg-vector.svg" alt="" />
+			<img class="bottom-left-vector" src="./assets/icons/bg-vector.svg" alt="" />
 		</div>
 		<!-- End sign up form -->
 	</body>

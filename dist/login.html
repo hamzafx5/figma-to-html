@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script defer src="./assets/js/app.js"></script>
+		<script defer src="./assets/js/login.js"></script>
+		<title>Login</title>
+	</head>
+	<body>
+		<!-- Start Navigation -->
+		<nav class="nav">
+			<a href="/" class="logo">
+				<img src="./assets/icons/logo.svg" alt="logo" />
+			</a>
+			<div class="menu-container">
+				<ul class="links">
+					<li>
+						<a href="#"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/icons/product-icon.svg" /> المنتجات</a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/icons/orders-icon.svg" /> الطلبات</a>
+					</li>
+					<li>
+						<a href="#"><img src="./assets/icons/shoping-card-icon.svg" /> عربة التسوق</a>
+					</li>
+				</ul>
+			</div>
+			<div class="select-lang nav-lang">
+				<div class="selected-lang">
+					<img src="./assets/icons/globe-icon.svg" alt="globe icon" />
+					<span>Arabic</span>
+				</div>
+				<ul class="lang-options">
+					<li data-lang="english">English</li>
+					<li data-lang="arabic">Arabic</li>
+					<li data-lang="france">France</li>
+				</ul>
+			</div>
+			<div class="burger-menu">
+				<div></div>
+			</div>
+		</nav>
+		<!-- End Navigation -->
+
+		<!-- Start login form -->
+		<div class="login-form-wrapper">
+			<h1>مرحبا بعودت</h1>
+			<p class="sub-title">تسجيل الدخو</p>
+			<form>
+				<!-- Email -->
+				<div class="input-group">
+					<label>البريد الإلكترونى </label>
+					<div class="input-icon" id="email">
+						<input type="email" placeholder="البريدك الإلكترونى" required />
+						<img src="./assets/icons/email.svg" alt="icon" />
+					</div>
+				</div>
+				<!-- Password -->
+				<div class="input-group">
+					<label>كلمة المرور</label>
+					<div class="input-icon" id="password">
+						<input type="password" id="pass" placeholder="كلمة المرور" required />
+						<img src="./assets/icons/lock.svg" alt="icon" />
+						<img data-target="#pass" class="show-and-hide-pass" src="./assets/icons/eye.svg" alt="icon" />
+					</div>
+				</div>
+				<div class="forget-pass-remember-me">
+					<div class="checkbox-group">
+						<input type="checkbox" id="remember-me" />
+						<label for="remember-me">تذكرني</label>
+					</div>
+					<a href="#">نسيت كلمة المرور?</a>
+				</div>
+				<div class="submit-btn-box">
+					<button class="button button-lg">تسجيل الدخو</button>
+					<p>
+						ليس لديك حساب?
+						<a href="index.html" class="link">سجل الا</a>
+					</p>
+				</div>
+			</form>
+			<!-- floating vectors -->
+			<img class="top-right-vector" src="./assets/icons/bg-vector.svg" alt="" />
+			<img class="bottom-left-vector" src="./assets/icons/bg-vector.svg" alt="" />
+		</div>
+		<!-- End login form -->
+	</body>
+</html>

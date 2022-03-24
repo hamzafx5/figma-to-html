@@ -1,0 +1,187 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as var;
+
+body {
+	background: var.$nav-bg;
+}
+
+.login-form-wrapper,
+.otp-form-wrapper,
+.signup-form-wrapper {
+	position: relative;
+	overflow: hidden;
+	padding: 4rem 0;
+	width: 100%;
+	min-height: calc(100vh - 90px);
+	height: max-content;
+	@include for-tablet-down {
+		min-height: calc(100vh - 68px);
+	}
+	h1 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.sub-title {
+		text-align: center;
+		font-size: 22px;
+		color: var.$nav-links-clr;
+		margin-bottom: 2rem;
+	}
+
+	.top-right-vector,
+	.bottom-left-vector {
+		display: none;
+		@include for-laptop-up {
+			display: block;
+			z-index: -1;
+			position: absolute;
+			width: 80%;
+			max-width: 400px;
+		}
+	}
+	.top-right-vector {
+		top: -6%;
+		right: -1%;
+	}
+	.bottom-left-vector {
+		transform: rotate(180deg);
+		bottom: -9%;
+		left: -1%;
+	}
+}
+
+.signup-form-wrapper {
+	form {
+		margin: 0 auto;
+		max-width: 1000px;
+		width: 100%;
+		padding: 0 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.5rem;
+		@include for-tablet-down {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.submit-btn-box {
+		@include for-tablet-up {
+			grid-column: 1/3;
+		}
+		text-align: center;
+		button {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.login-form-wrapper {
+	form {
+		margin: 0 auto;
+		max-width: 600px;
+		width: 100%;
+		display: grid;
+		padding: 0 1rem;
+		grid-gap: 1.5rem;
+		grid-template-columns: 1fr;
+	}
+
+	.forget-pass-remember-me {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.submit-btn-box {
+		text-align: center;
+		button {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.otp-form-wrapper {
+	.otp-box {
+		margin: 0 auto;
+		width: 100%;
+		padding: 0 1rem;
+		max-width: 600px;
+		.otp-inputs {
+			position: relative;
+			direction: ltr;
+			margin: 0 auto 1.5rem;
+			width: max-content;
+			display: flex;
+			&.valid .otp-input {
+				border-color: #59a461;
+			}
+			&.error .otp-input {
+				border-color: red;
+				color: red;
+			}
+			&.error .error {
+				display: block;
+			}
+			.error {
+				display: none;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				color: red;
+				font-size: 90%;
+			}
+			.otp-input {
+				--box-size: 50px;
+				@include for-tablet-up {
+					--box-size: 70px;
+				}
+				display: flex;
+				justify-content: center;
+				margin: 10px;
+				line-height: var(--box-size);
+				border-radius: 10px;
+				width: var(--box-size);
+				height: var(--box-size);
+				border: 1px solid #cfcfcf;
+				&:focus {
+					outline: none;
+					border-color: var.$primary-clr;
+				}
+			}
+		}
+	}
+	.counter-box {
+		text-align: center;
+		margin-bottom: 1rem;
+		.counter {
+			font-size: 25px;
+			color: #000;
+		}
+	}
+	.actions-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		button {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.map-box {
+	width: 100%;
+	aspect-ratio: 6/5;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.btn-box {
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-grow: 1;
+	button {
+		width: 100% !important;
+	}
+}

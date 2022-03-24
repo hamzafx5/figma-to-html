@@ -38,6 +38,12 @@
 	color: #fff;
 }
 
+.button-disabled {
+	background: #cfcfcf;
+	color: #fff;
+	pointer-events: none;
+}
+
 .button-outline.button-disabled {
 	border-color: #cfcfcf;
 	color: #cfcfcf;
