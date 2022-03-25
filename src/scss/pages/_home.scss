@@ -1,0 +1,124 @@
+@use "../helpers/variables" as var;
+@use "../helpers/mixins" as *;
+
+.header {
+	margin: 2rem 0 3rem;
+	.main-slider {
+		width: 100%;
+		aspect-ratio: 2.8/1;
+	}
+}
+
+.swiper-pagination {
+	&-bullet {
+		width: 14px;
+		height: 8px;
+		border-radius: 2px;
+		background: lighten(var.$primary-clr, 10%);
+		transition: width 300ms ease;
+		&-active {
+			background: var.$primary-clr;
+		}
+	}
+}
+
+.search-area {
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5rem;
+	.input-search {
+	}
+	button {
+		height: 48px !important;
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+		span {
+			padding-left: 0.5rem;
+			@include for-tablet-down {
+				display: none;
+			}
+		}
+	}
+}
+
+.discount-slider {
+	margin-bottom: 5rem;
+}
+
+.categories {
+	&-grid {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		@include for-tablet-up {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@include for-laptop-up {
+			grid-template-columns: repeat(5, 1fr);
+		}
+		@include for-desktop-up {
+			grid-template-columns: repeat(6, 1fr);
+		}
+		.category-item {
+			aspect-ratio: 1/1;
+			border-radius: 10px;
+			background: #fff;
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+			& > * {
+				transition: 500ms ease;
+			}
+			&:hover {
+				img {
+					filter: drop-shadow(1px 2px 6px rgba(0, 0, 0, 0.14));
+				}
+				a {
+					color: var.$primary-clr;
+				}
+			}
+			a {
+				text-align: center;
+				font-weight: 500;
+				font-size: 110%;
+			}
+		}
+	}
+}
+
+.divider {
+	height: 2px;
+	margin: 5rem 0;
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.spacial-products {
+	margin-bottom: 5rem;
+	&-head {
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& > * {
+			margin: 0;
+		}
+	}
+}
+
+.products-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+	@include for-up(850px) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include for-desktop-up {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

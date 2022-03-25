@@ -19,12 +19,18 @@
 	}
 }
 
-.button > img {
-	width: 20px;
-}
+// .button > img {
+// 	width: 20px;
+// }
 
 .button-lg {
 	padding: 13px 24px;
+	font-size: 110%;
+}
+
+.button-sm {
+	padding: 8px 18px;
+	font-size: 90%;
 }
 
 .button-outline {

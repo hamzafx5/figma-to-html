@@ -39,9 +39,14 @@ h1 {
 	color: #000;
 }
 
+img {
+	max-width: 100%;
+	user-select: none !important;
+}
+
 a {
 	text-decoration: none;
-	color: inherit;
+	color: #000;
 	&:hover {
 		color: var.$primary-clr;
 	}

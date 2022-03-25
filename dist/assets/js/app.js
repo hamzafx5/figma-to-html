@@ -1,7 +1,7 @@
 "use strict";
 // helpers function
 function get(selector, all = false) {
-	if (all) return document.querySelectorAll(selector);
+	if (all) return [...document.querySelectorAll(selector)];
 	return document.querySelector(selector);
 }
 
@@ -89,9 +89,10 @@ function showAndHidePass() {
 	});
 }
 
-function reversStr(str) {
+function reversStr(_str) {
+	let str = _str.replace(/\n/g, "");
 	let revStr = "";
-	for (let i = str.length - 1; 0 < i; i--) {
+	for (let i = str.length - 1; 0 <= i; i--) {
 		revStr += str[i];
 	}
 	return revStr;

@@ -3,36 +3,19 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<script defer src="./assets/js/app.js"></script>
-		<script defer src="./assets/js/singup.js"></script>
-		<title>sing up</title>
+		<title>Home</title>
 	</head>
 	<body>
-		<!-- select location module -->
-		<div class="module-box select-location-module">
-			<div class="module-content-box">
-				<div class="close-module-btn">
-					<img src="./assets/icons/x.svg" alt="close icon" />
-				</div>
-				<!-- content -->
-				<div class="map-box">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463876.9397043577!2d46.54233657557407!3d24.72555534712375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sma!4v1647958956527!5m2!1sen!2sma"
-						width="100%"
-						height="100%"
-						style="border: 0"
-						allowfullscreen="true"
-						loading="lazy"
-					></iframe>
-				</div>
-				<div class="btn-box">
-					<button class="button button-gray">إلغاء</button>
-					<button class="button">حفض</button>
-				</div>
-			</div>
-		</div>
-
+		<!-- Loader -->
+		<div class="spin-loader"></div>
+		<script>
+			window.addEventListener('load', () => {
+				let loader = document.querySelector('.spin-loader');
+				loader && loader.remove()
+			})
+		</script>
 		<!-- Start Navigation -->
 		<nav class="nav">
 			<a href="/" class="logo">
@@ -41,7 +24,7 @@
 			<div class="menu-container">
 				<ul class="links">
 					<li>
-						<a href="#"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
+						<a class="active" href="#"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
 					</li>
 					<li>
 						<a href="#"><img src="./assets/icons/product-icon.svg" /> المنتجات</a>
@@ -71,113 +54,234 @@
 		</nav>
 		<!-- End Navigation -->
 
-		<!-- Start sign up form -->
-		<div class="signup-form-wrapper">
-			<h1>إنضم الينا</h1>
-			<p class="sub-title">ابدأ بالتسوق وانت في مكانك</p>
-			<form>
-				<!-- Company Name -->
-				<div class="input-group">
-					<label>اسم الشركة<span style="color: red"> * </span></label>
-					<div class="input-icon" id="company-name">
-						<input type="text" placeholder="ادخل اسم الشركتك" required />
-						<img src="./assets/icons/company.svg" alt="icon" />
-					</div>
-				</div>
-				<!-- Email -->
-				<div class="input-group">
-					<label>البريد الإلكترونى <span style="color: red"> * </span></label>
-					<div class="input-icon" id="email">
-						<input type="email" placeholder="البريدك الإلكترونى" required />
-						<img src="./assets/icons/email.svg" alt="icon" />
-					</div>
-				</div>
-				<!-- Phone number -->
-				<div class="input-group">
-					<label>رقم الجوال <span style="color: red"> * </span></label>
-					<div class="input-icon" id="phone">
-						<input class="drop-down" type="text" placeholder="رقم جوالك" required />
-						<img src="./assets/icons/phone.svg" alt="icon" />
-						<div class="input-drop-down">
-							<div class="selected-item">
-								<span>966</span>
-								<img src="./assets/icons/down-arrow.svg" alt="down arrow" />
-							</div>
-							<ul>
-								<li>966</li>
-								<li>998</li>
-								<li>897</li>
-							</ul>
+		<div class="container-xl">
+			<!-- Start header area -->
+			<header class="header">
+				<!-- Main slider -->
+				<div class="swiper main-slider">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<img src="./assets/img/main-slider-bg-1.png" alt="Hero vector" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/main-slider-bg-2.png" alt="Hero vector" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/main-slider-bg-3.png" alt="Hero vector" />
 						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<!-- Client location -->
-				<div class="input-group">
-					<label>المنطقة <span style="color: red"> * </span></label>
-					<div class="input-icon" id="location">
-						<input type="text" placeholder="منطقتك" />
-						<img src="./assets/icons/location.svg" alt="icon" />
-						<button type="button" class="input-button open-map-to-select-location">
-							انقر لإختيار المنطقة
+			</header>
+			<!-- End header area -->
+
+			<!-- Start main area -->
+			<main class="main">
+				<!-- Search section -->
+				<div class="search-area">
+					<div class="input-search">
+						<input type="text" placeholder="بحت" />
+						<button class="button">
+							<span>إبحت</span><img src="./assets/icons/search-white.svg" alt="Search icon" />
 						</button>
+						<img class="search-floating-icon" src="./assets/icons/search-gray.svg" alt="Search icon" />
 					</div>
+					<button class="button button-outline ms-3"> 
+						<span>تصفية</span></span><img  src="./assets/icons/filter.svg" alt="Filter icon" />
+					</button>
 				</div>
-				<!-- Password -->
-				<div class="input-group">
-					<label>كلمة المرور <span style="color: red"> * </span></label>
-					<div class="input-icon" id="password">
-						<input type="password" id="pass" placeholder="كلمة المرور" />
-						<img src="./assets/icons/lock.svg" alt="icon" />
-						<img data-target="#pass" class="show-and-hide-pass" src="./assets/icons/eye.svg" alt="icon" />
+				<!-- Discount slides -->
+				<div class="swiper discount-slider">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-1.png" alt="Discount Img" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-2.png" alt="Discount Img" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-3.png" alt="Discount Img" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-1.png" alt="Discount Img" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-2.png" alt="Discount Img" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/img/discount-slider-3.png" alt="Discount Img" />
+						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<!-- Confirm Password -->
-				<div class="input-group">
-					<label>أعد كتابة كلمة المرور <span style="color: red"> * </span></label>
-					<div class="input-icon" id="password">
-						<input type="password" id="confirm-pass" placeholder="أعد كتابة كلمة المرور" />
-						<img src="./assets/icons/lock.svg" alt="icon" />
-						<img
-							data-target="#confirm-pass"
-							class="show-and-hide-pass"
-							src="./assets/icons/eye.svg"
-							alt="icon"
-						/>
-						<div id="confirm-pass-errors" class="error-box">عدرآ كلمة المرور غير متطابقة</div>
+				<!-- Categories section -->
+				<section class="categories">
+					<h2>الأقسام</h2>
+					<div class="categories-grid">
+						<div class="category-item">
+							<img src="./assets/img/categorie/vegetables.png" alt="category item" />
+							<a href="#">خضراوات</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/fruits.png" alt="category item" />
+							<a href="#">فواكة</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/meat-chicken.png" alt="category item" />
+							<a href="#">أﺳﻤﺎك ﻟﺤﻮم و دواﺟﻦ </a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/milk-and-cheese.png" alt="category item" />
+							<a href="#">ألبان و أجبان</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/bread.png" alt="category item" />
+							<a href="#">نواشف</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/canned-food.png" alt="category item" />
+							<a href="#">معلبات</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/spices-grains.png" alt="category item" />
+							<a href="#">بهارات وحبوب</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/drinks.png" alt="category item" />
+							<a href="#">مشروبات</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/rice-olives.png" alt="category item" />
+							<a href="#">أرز و زيوت</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/office-supplies.png" alt="category item" />
+							<a href="#">مستلزمات مكتبية</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/detergent.png" alt="category item" />
+							<a href="#">منظفات</a>
+						</div>
+						<div class="category-item">
+							<img src="./assets/img/categorie/packing-storage.png" alt="category item" />
+							<a href="#">تعبئة وتخزين</a>
 					</div>
-				</div>
-				<!-- Add file -->
-				<div class="input-group input-file">
-					<label>السجل التجاري</label>
-					<div class="input-icon">
-						<input type="file" />
-						<img src="./assets/icons/file.svg" alt="icon" />
-						<span class="file-input-label">لم يتم اخيار اي ملف</span>
-						<button type="button" class="input-button browse-files-btn">أختر ملف</button>
+				</section>
+				<div class="divider"></div>
+				<!-- Spacial products section -->
+				<section class="spacial-products">
+					<div class="spacial-products-head">
+						<h2>منتجات مميزة</h2>
+						<a href="#">جميع المنتجات</a>
 					</div>
-				</div>
-				<!-- Add file -->
-				<div class="input-group input-file">
-					<label>إتفاقية الإستخدام</label>
-					<div class="input-icon">
-						<input type="file" />
-						<img src="./assets/icons/file.svg" alt="icon" />
-						<span class="file-input-label">لم يتم اخيار اي ملف</span>
-						<button type="button" class="input-button browse-files-btn">أختر ملف</button>
+					<div class="products-grid">
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/meat.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">لحم الضمأن</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">128</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									اضف للسلة
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/red-apple.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">تفاح أحمر</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">28</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									اضف للسلة
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/mango.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">مانجو باكستاني</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">128</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									اضف للسلة
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="submit-btn-box">
-					<button class="button button-lg">تسجيل الدخو</button>
-					<p>
-						لديك حساب بالفعل?
-						<a href="login.html" class="link">قم بتسجيل الدخو </a>
-					</p>
-				</div>
-			</form>
-			<!-- floating vectors -->
-			<img class="top-right-vector" src="./assets/icons/bg-vector.svg" alt="" />
-			<img class="bottom-left-vector" src="./assets/icons/bg-vector.svg" alt="" />
+				</section>
+			</main>
+			<!-- End main area -->
 		</div>
-		<!-- End sign up form -->
+
+		<!-- scripts -->
+		<script defer src="./assets/js/vendor/swiper.min.js"></script>
+		<script defer src="./assets/js/app.js"></script>
+		<script defer src="./assets/js/home.js"></script>
 	</body>
 </html>

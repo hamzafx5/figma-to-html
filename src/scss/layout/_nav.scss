@@ -40,12 +40,13 @@
 			transform: translateX(-110%);
 			padding: 1.5rem;
 			position: fixed;
-			top: 90px;
+			top: 0;
 			left: 0;
 			min-width: 200px;
 			width: 30%;
 			max-width: 300px;
-			height: calc(100vh - 90px);
+			height: 100vh;
+			padding-top: 90px;
 			background: inherit;
 			box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.06);
 			z-index: 10;
@@ -53,8 +54,7 @@
 				transform: translateX(0);
 			}
 			@include for-tablet-down {
-				top: 68px;
-				height: calc(100vh - 68px);
+				padding-top: 68px;
 			}
 		}
 		.links {

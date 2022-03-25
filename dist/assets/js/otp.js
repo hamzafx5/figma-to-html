@@ -1,28 +1,23 @@
 const otpInputBox = get(".otp-inputs");
 const otpCodeInputs = get(".otp-inputs .otp-input", true);
 
-const otpCode = [];
-
 otpCodeInputs.forEach((input, index) => {
 	input.setAttribute("data-index", index);
 	input.on("input", (e) => {
 		const isNum = Number.isInteger(Number(e.data));
 		if (isNum) {
 			input.innerHTML = e.data;
-			otpCode[index] = Number(e.data);
 			const nextSibling = e.currentTarget.nextElementSibling;
 			if (input.dataset.index < otpCodeInputs.length - 1) {
 				nextSibling.focus();
 			}
 			// check if the opt code is valid
-			const code = otpCode.reduce((prev, current) => {
-				return (prev += current.toString());
-			}, "");
-			if (otpCode.length === 4 && code === "4000") {
+			let otpCode = get(".otp-input", true).reduce((prev, current) => (prev += current.innerText), "");
+			if (otpCode.length !== 4) return;
+			if (otpCode === "4000") {
 				otpInputBox.classList.remove("error");
 				otpInputBox.classList.add("valid");
 			} else {
-				if (otpCode.length !== 4) return;
 				otpInputBox.classList.remove("valid");
 				otpInputBox.classList.add("error");
 			}
