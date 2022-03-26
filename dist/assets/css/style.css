@@ -7182,7 +7182,7 @@ a:hover {
   font: inherit;
   line-height: 1.2em;
   background-color: #f8991d;
-  color: #fff;
+  color: #fff !important;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -7196,6 +7196,10 @@ a:hover {
 }
 .button:hover {
   opacity: 0.8;
+}
+
+.button-green {
+  background: #00cc6a;
 }
 
 .button-lg {
@@ -7919,8 +7923,12 @@ a:hover {
 .nav .menu-container .links li a img {
   margin-left: 8px;
 }
+.nav .nav-lang {
+  margin-right: 1rem;
+}
 @media (max-width: 970px) {
   .nav .nav-lang {
+    margin-right: unset;
     justify-self: end;
   }
 }
@@ -8051,7 +8059,7 @@ a:hover {
 }
 
 .spacial-products {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .spacial-products-head {
   margin-bottom: 1.5rem;
@@ -8372,4 +8380,83 @@ body {
 }
 .orders-list-table .badges-box .badge-outline img {
   width: 30px;
+}
+
+.footer {
+  background: #f8991d;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 768px) {
+  .footer-content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.33333%;
+            flex: 1 0 33.33333%;
+  }
+}
+@media (max-width: 768px) {
+  .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.footer-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-content .social-media-links li:not(:last-child),
+.footer-content .footer-links li:not(:last-child) {
+  margin-left: 1rem;
+}
+@media (max-width: 768px) {
+  .footer-content .social-media-links,
+.footer-content .footer-links {
+    margin-bottom: 2rem;
+  }
+}
+.footer-content a {
+  color: #fff;
+}
+.footer-content a:hover {
+  color: #ddd;
+}
+.footer-content .rights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-content .rights img {
+  margin-bottom: 1.5rem;
+  width: 120px;
+}
+@media (max-width: 768px) {
+  .footer-content .rights {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }

@@ -1,2 +1,54 @@
 @use "../helpers/variables" as var;
 @use "../helpers/mixins" as *;
+
+.footer {
+	background: var.$primary-clr;
+	padding-top: 1.5rem;
+	padding-bottom: 2.5rem;
+
+	&-content {
+		display: flex;
+		align-items: center;
+		@include for-tablet-up {
+			justify-content: space-between;
+			flex: 1 0 33.33333%;
+		}
+		@include for-tablet-down {
+			flex-direction: column;
+		}
+		ul {
+			display: flex;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.social-media-links,
+		.footer-links {
+			li:not(:last-child) {
+				margin-left: 1rem;
+			}
+			@include for-tablet-down {
+				margin-bottom: 2rem;
+			}
+		}
+
+		a {
+			color: #fff;
+			&:hover {
+				color: #ddd;
+			}
+		}
+		.rights {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			img {
+				margin-bottom: 1.5rem;
+				width: 120px;
+			}
+			@include for-tablet-down {
+				order: 3;
+			}
+		}
+	}
+}

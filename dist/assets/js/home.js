@@ -42,3 +42,15 @@ get(".add-product-to-card", true).forEach((item) => {
 		kgCount.innerText = count;
 	});
 });
+
+// active "add to card button"
+get(".add-product-to-card button", true).forEach((btn) => {
+	btn.on("click", () => {
+		btn.classList.toggle("button-green");
+		if (btn.classList.contains("button-green")) {
+			btn.querySelector("span").innerText = "في للسلة";
+			return;
+		}
+		btn.querySelector("span").innerText = "اضف للسلة";
+	});
+});

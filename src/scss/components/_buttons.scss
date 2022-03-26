@@ -7,7 +7,7 @@
 	font: inherit;
 	line-height: 1.2em;
 	background-color: var.$primary-clr;
-	color: #fff;
+	color: #fff !important;
 	padding: 10px 20px;
 	border-radius: 8px;
 	cursor: pointer;
@@ -19,9 +19,9 @@
 	}
 }
 
-// .button > img {
-// 	width: 20px;
-// }
+.button-green {
+	background: #00cc6a;
+}
 
 .button-lg {
 	padding: 13px 24px;

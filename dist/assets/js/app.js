@@ -89,6 +89,12 @@ function showAndHidePass() {
 	});
 }
 
+// Add dynamic date on the footer
+const footerDate = get("#current-year");
+if (footerDate) {
+	footerDate.innerText = new Date().getFullYear();
+}
+
 function reversStr(_str) {
 	let str = _str.replace(/\n/g, "");
 	let revStr = "";
