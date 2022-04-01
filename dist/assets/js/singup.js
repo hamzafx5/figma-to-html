@@ -11,9 +11,6 @@ closeLocationModuleBtn.on("click", () => {
 	locationModule.classList.remove("open");
 });
 
-showAndHidePass();
-hidePlaceholder();
-
 // Open input drop down list
 get(".input-drop-down").on("click", (e) => {
 	e.currentTarget.classList.toggle("active");

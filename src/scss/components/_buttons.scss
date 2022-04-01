@@ -1,67 +1,77 @@
 @use "../helpers/variables" as var;
 
 .button {
+	--bg: #f8991d;
+	--clr: #fff;
+	--hover-clr: #eee;
+	--border-clr: transparent;
+	--btn-size: 10px 20px;
+	border: 1px solid var(--border-clr);
 	display: inline-block;
 	user-select: none;
-	border: none;
 	font: inherit;
 	line-height: 1.2em;
-	background-color: var.$primary-clr;
-	color: #fff !important;
-	padding: 10px 20px;
+	background-color: var(--bg);
+	color: var(--clr);
+	padding: var(--btn-size);
 	border-radius: 8px;
 	cursor: pointer;
 	vertical-align: auto;
 	width: max-content;
 	height: max-content;
+	transition: 333ms ease;
 	&:hover {
 		opacity: 0.8;
+		color: var(--hover-clr);
 	}
 }
 
 .button-green {
-	background: #00cc6a;
+	--bg: #00e25e;
 }
 
 .button-lg {
-	padding: 13px 24px;
+	--btn-size: 13px 24px;
 	font-size: 110%;
 }
 
 .button-sm {
-	padding: 8px 18px;
-	font-size: 90%;
+	--btn-size: 7px 16px;
+	font-size: 85%;
 }
 
 .button-outline {
-	background: var.$nav-bg;
-	border: 1px solid var.$primary-clr;
-	color: var.$primary-clr;
+	--bg: #fff;
+	--border-clr: #f8991d;
+	--clr: #f8991d;
+	--hover-clr: #f8991d;
 }
 
 .button-gray {
-	background: #cfcfcf;
-	color: #fff;
+	--bg: #cfcfcf;
+	--clr: #ffff;
+	--hover-clr: #fcfcfc;
+}
+
+.button-border-gray {
+	--border-clr: #8b8b8b;
 }
 
 .button-disabled {
-	background: #cfcfcf;
-	color: #fff;
-	pointer-events: none;
-}
-
-.button-outline.button-disabled {
-	border-color: #cfcfcf;
-	color: #cfcfcf;
+	--bg: #cfcfcf;
+	--clr: #fff;
+	--border-clr: transparent;
 	pointer-events: none;
 }
 
 .button-success {
-	background: #dffff2;
-	color: #5db188;
+	--bg: #dffff2;
+	--clr: #5db188;
+	--hover-clr: lighten(#5db188, 5%);
 }
 
 .button-danger {
-	background: #fbe9e9;
-	color: #a65151;
+	--bg: #fbe9e9;
+	--clr: #a65151;
+	--hover-clr: lighten(#a65151, 5%);
 }

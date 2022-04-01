@@ -1,2 +1,0 @@
-showAndHidePass();
-hidePlaceholder();

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>Home</title>
 	</head>
-	<body>
+	<body data-page="home">
 		<!-- Loader -->
 		<div class="spin-loader"></div>
 		<script>
@@ -24,13 +24,13 @@
 			<div class="menu-container">
 				<ul class="links">
 					<li>
-						<a class="active" href="#"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
+						<a class="active" href="/"><img src="./assets/icons/home-icon.svg" /> الرئيسة</a>
 					</li>
 					<li>
 						<a href="#"><img src="./assets/icons/product-icon.svg" /> المنتجات</a>
 					</li>
 					<li>
-						<a href="#"><img src="./assets/icons/orders-icon.svg" /> الطلبات</a>
+						<a href="orders.html"><img src="./assets/icons/orders-icon.svg" /> الطلبات</a>
 					</li>
 					<li>
 						<a href="#"><img src="./assets/icons/shoping-card-icon.svg" /> عربة التسوق</a>
@@ -83,14 +83,61 @@
 				<div class="search-area">
 					<div class="input-search">
 						<input type="text" placeholder="بحت" />
-						<button class="button">
+						<button class="button search-btn">
 							<span>إبحت</span><img src="./assets/icons/search-white.svg" alt="Search icon" />
 						</button>
 						<img class="search-floating-icon" src="./assets/icons/search-gray.svg" alt="Search icon" />
+						<!-- search suggestions -->
+						<ul class="search-suggestions-box">
+							<li class="selected">
+								<img src="./assets/img/searh-suggestions/colored-pepper.png" alt="vegetable" />
+								<span>فليفلة ملونة</span>
+							</li>
+							<li>
+								<img src="./assets/img/searh-suggestions/green-pepper.png" alt="vegetable" />
+								<span>فليفلة خضرا</span>
+							</li>
+							<li>
+								<img src="./assets/img/searh-suggestions/red-pepper.png" alt="vegetable" />
+								<span>فليفلة حمرا</span>
+							</li>
+							<li>
+								<img src="./assets/img/searh-suggestions/yellow-pepper.png" alt="vegetable" />
+								<span>فليفلة صفرا</span>
+							</li>
+						</ul>
 					</div>
-					<button class="button button-outline ms-3"> 
-						<span>تصفية</span></span><img  src="./assets/icons/filter.svg" alt="Filter icon" />
-					</button>
+					<!-- filter box -->
+					<div class="filter-container ms-3">
+						<button class="button button-outline open-close-filter-box"> 
+							<span>تصفية</span></span><img  src="./assets/icons/filter.svg" alt="Filter icon" />
+						</button>
+						<div class="filter-content">
+							<h6>النوع</h6>
+							<div class="filter-block">
+								<select class="dropdown">
+									<option>طازج</option>
+									<option>فواكة</option>
+									<option>معلبات</option>
+								</select>
+								<button class="button button-gray button-border-gray button-sm  clear-filter">مسح الفلتر</button>
+							</div>
+							<h6>الأسعار</h6>
+							<div class="filter-block">
+								<div class="price-range">
+									<label for="min"  class="me-4">
+										من
+										<input class="input " id="min" type="number" min="1" value="1" max="1000" />
+									</label>
+									<label for="max">
+										إلى
+										<input class="input" id="max" type="number" value="1000" min="1" max="1000" />
+									</label>
+								</div>
+								<button class="button button-sm view-result">عرض </button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!-- Discount slides -->
 				<div class="swiper discount-slider">
@@ -115,6 +162,8 @@
 							<img src="./assets/img/discount-slider-3.png" alt="Discount Img" />
 						</div>
 					</div>
+					<div class="swiper-button-next"></div>
+    				<div class="swiper-button-prev"></div>
 					<div class="swiper-pagination"></div>
 				</div>
 				<!-- Categories section -->
@@ -312,7 +361,7 @@
 
 		<!-- scripts -->
 		<script defer src="./assets/js/vendor/swiper.min.js"></script>
-		<script defer src="./assets/js/app.js"></script>
-		<script defer src="./assets/js/home.js"></script>
+		<script defer src="./assets/js/app.js" type="module"></script>
+		<!-- <script defer src="./assets/js/home.js"></script> -->
 	</body>
 </html>

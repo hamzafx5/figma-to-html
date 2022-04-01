@@ -4,11 +4,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<script defer src="./assets/js/app.js"></script>
-		<script defer src="./assets/js/otp.js"></script>
+		<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
 		<title>Login</title>
 	</head>
-	<body>
+	<body data-page="one-time-password">
+		<div class="spin-loader"></div>
+		<script>
+			window.addEventListener("load", () => {
+				let loader = document.querySelector(".spin-loader");
+				loader && loader.remove();
+			});
+		</script>
 		<!-- Start Navigation -->
 		<nav class="nav">
 			<a href="/" class="logo">
@@ -75,5 +81,7 @@
 			<img class="bottom-left-vector" src="./assets/icons/bg-vector.svg" alt="" />
 		</div>
 		<!-- Start One time password section -->
+		<script defer src="./assets/js/app.js" type="module"></script>
+		<script defer src="./assets/js/otp.js"></script>
 	</body>
 </html>

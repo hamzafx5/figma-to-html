@@ -1,0 +1,38 @@
+@use "../helpers/variables" as var;
+@use "../helpers/mixins" as *;
+
+.pagination-nav {
+	width: max-content;
+	display: flex;
+	.last {
+		margin-right: 10px;
+	}
+	.next,
+	.prev {
+		width: 30px;
+		height: 30px;
+	}
+	.next,
+	.prev,
+	.pagination .padg-item {
+		cursor: pointer;
+		user-select: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 36px;
+		background: #ffffff;
+		border: 1px solid #cfcfcf;
+		border-radius: 8px;
+		margin: 0 6px;
+	}
+	.pagination {
+		display: flex;
+		.padg-item.active {
+			background-color: var.$primary-clr;
+			color: #fff;
+			border-color: var.$primary-clr;
+		}
+	}
+}

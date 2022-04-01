@@ -1,0 +1,25 @@
+@use "../helpers/variables" as *;
+
+// #select-container {
+//   height: 40px;
+//   position: relative;
+//   width: 420px;
+// }
+
+.dropdown {
+	border: 1px solid #fcfcfc;
+	border-radius: 20px;
+	background: #fff;
+	color: inherit;
+	cursor: pointer;
+	height: 30px;
+	outline: none;
+	padding-left: 16px;
+	padding-right: 16px;
+	width: max-content;
+	box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.1);
+	border-radius: 9px;
+	& > * {
+		display: inline-block;
+	}
+}

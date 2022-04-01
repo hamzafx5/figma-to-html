@@ -55,6 +55,6 @@ resendOtpCodeBtn.on("click", () => {
 	});
 });
 
-counter(get(".counter"), 5, () => {
+counter(get(".counter"), 16, () => {
 	resendOtpCodeBtn.classList.remove("button-disabled");
 });
