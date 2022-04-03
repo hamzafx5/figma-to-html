@@ -13,6 +13,8 @@ import helpers, {
 	filterBox,
 } from "./modules/functions.js";
 
+import { dropdownBox, productDetailsSlider, disableAddToCardBtn } from "./modules/functions-2.js";
+
 // init helpers fun
 helpers();
 
@@ -20,22 +22,46 @@ window.addEventListener("DOMContentLoaded", () => {
 	const currentPage = document.body.dataset.page;
 	openCloseMenu();
 	selectLang();
+	function commonFunctionality() {
+		searchFunctionality();
+		filterBox();
+		productQuantityCounter();
+		activeAddToCardBtn();
+	}
 
 	switch (currentPage) {
 		case "home":
-			searchFunctionality();
-			filterBox();
+			commonFunctionality();
 			homeMainSlider();
 			discountSlider();
-			productQuantityCounter();
-			activeAddToCardBtn();
+			break;
+		case "home-logged":
+			commonFunctionality();
+			homeMainSlider();
+			dropdownBox();
+			paginationFunctionality();
+			break;
+		case "home-2":
+			commonFunctionality();
+			break;
+		case "product-details":
+			commonFunctionality();
+			productDetailsSlider();
+			disableAddToCardBtn();
+			break;
+		case "product-details-2":
+			commonFunctionality();
+			productDetailsSlider();
 			break;
 		case "search-result":
-			searchFunctionality();
-			filterBox();
+			commonFunctionality();
 			homeMainSlider();
-			productQuantityCounter();
-			activeAddToCardBtn();
+			dropdownBox();
+			paginationFunctionality();
+			break;
+		case "search-result-2":
+			commonFunctionality();
+			dropdownBox();
 			paginationFunctionality();
 			break;
 		case "login":
@@ -56,4 +82,4 @@ function s(_str) {
 	return revStr;
 }
 
-console.log(s("جئاتنلا ضرع"));
+console.log(s("(ماﺮﺟ 400) ﺔﺒﺣ 24"));

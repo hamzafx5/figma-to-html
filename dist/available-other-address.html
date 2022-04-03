@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<title>Search Result</title>
+		<title>Search result 3</title>
 	</head>
-	<body data-page="search-result">
+	<body data-page="home-logged" id="home-logged">
 		<!-- Loader -->
 		<div class="spin-loader"></div>
 		<script>
@@ -36,7 +36,7 @@
 						<a href="#"><img src="./assets/icons/shoping-card-icon.svg" /> عربة التسوق</a>
 					</li>
 				</ul>
-				<a href="./signup.html" class="button">انضم الينا</a>
+				<a class="button"><img class="me-2" src="./assets/icons/user-icons.svg" />هشام محمد</a>
 			</div>
 			<div class="select-lang nav-lang">
 				<div class="selected-lang">
@@ -63,13 +63,13 @@
 					<div class="swiper-wrapper">
 						<!-- Slides -->
 						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-1.png" alt="Hero vector" />
+							<img src="./assets/img/main-slider-bg-4.png" alt="Hero vector" />
 						</div>
 						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-2.png" alt="Hero vector" />
+							<img src="./assets/img/main-slider-bg-5.png" alt="Hero vector" />
 						</div>
 						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-3.png" alt="Hero vector" />
+							<img src="./assets/img/main-slider-bg-6.png" alt="Hero vector" />
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
@@ -143,7 +143,7 @@
 				<!-- Search products section -->
 				<section class="search-products">
 					<div class="search-products-head">
-						<h2> نتائج البحث لـ " <span>فواكة</span> " 61 منتجات</h2>
+						<h2> نتائج البحث لـ " <span>فواكة</span> "</h2>
 						<div class="sort-dropdown-label">
 							<span> ترتيب حسب السعر : </span>
 							<select class='dropdown'>
@@ -151,9 +151,10 @@
 								<option>  للأعلى الأقل </option>
 							</select>
 						</div>
+						<!-- Select Address -->
 						<div class="select-address">
-							<span class="label">انت تتسوق على عنوان</span>
-							<div class="dropdown-box">  
+							<div class="label">انت تتسوق على عنوان</div>
+							<div class="dropdown-box">
 								<div class="selected-item">
 									<span>الدمام - حي طيبة</span>
 									<img src="./assets/icons/arrow-down-fill.svg" />
@@ -176,7 +177,7 @@
 									</div>
 								</div>
 							</div>
-							<span class="address-note">قد تختلف المنتجات المعروضة حسب عنوان الشحن</span>
+							<div class="address-note">قد تختلف المنتجات المعروضة حسب عنوان الشحن</div>
 						</div>
 					</div>
 					<div class="products-grid">
@@ -194,6 +195,7 @@
 										<span class="currency">ر.س</span>
 									</div>
 								</div>
+								<span class="product-not-available">متوفر في فروع أخرى</span>
 							</div>
 							<!-- add to card CTA -->
 							<div class="left-col add-product-to-card">
@@ -206,11 +208,12 @@
 										<img src="./assets/icons/min-icon.svg" alt="plus icon">
 									</div>
 								</div>
-								<button class="button"> 
+								<button class="button button-disabled"> 
 									<span>اضف للسلة</span>
 									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
 								</button>
 							</div>
+
 						</div>
 						<!-- product -->
 						<div class="product">
@@ -258,6 +261,7 @@
 										<span class="currency">ر.س</span>
 									</div>
 								</div>
+								<span class="product-not-available">متوفر في فروع أخرى</span>
 							</div>
 							<!-- add to card CTA -->
 							<div class="left-col add-product-to-card">
@@ -270,7 +274,7 @@
 										<img src="./assets/icons/min-icon.svg" alt="plus icon">
 									</div>
 								</div>
-								<button class="button"> 
+								<button class="button button-disabled"> 
 									<span>اضف للسلة</span>
 									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
 								</button>
@@ -322,6 +326,7 @@
 										<span class="currency">ر.س</span>
 									</div>
 								</div>
+								<span class="product-not-available">متوفر في فروع أخرى</span>
 							</div>
 							<!-- add to card CTA -->
 							<div class="left-col add-product-to-card">
@@ -334,7 +339,7 @@
 										<img src="./assets/icons/min-icon.svg" alt="plus icon">
 									</div>
 								</div>
-								<button class="button"> 
+								<button class="button button-disabled"> 
 									<span>اضف للسلة</span>
 									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
 								</button>
@@ -376,6 +381,39 @@
 						<div class="product">
 							<div class="right-col">
 								<div class="product-img">
+									<img src="./assets/img/products/mango-3.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title"> مانجو </h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">27</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+								<span class="product-not-available">متوفر في فروع أخرى</span>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button button-disabled"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
 									<img src="./assets/img/products/kiwi.png" alt="product image">
 								</div>
 								<div class="product-info">
@@ -472,45 +510,13 @@
 						<div class="product">
 							<div class="right-col">
 								<div class="product-img">
-									<img src="./assets/img/products/mango.png" alt="product image">
+									<img src="./assets/img/products/red-pomegranate.png" alt="product image">
 								</div>
 								<div class="product-info">
-									<h4 class="product-info-title">مانجو باكستاني</h4>
+									<h4 class="product-info-title">رمان أحمر</h4>
 									<span class="product-info-unit">كيلو جرام</span>
 									<div class="product-info-price">
-										<span class="price">128</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/mango-2.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title"> مانجو </h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">27</span>
+										<span class="price">39</span>
 										<span class="currency">ر.س</span>
 									</div>
 								</div>
@@ -584,25 +590,58 @@
 						<h3>عرض 71 الى 33 من 902 (51 صفحة)</h3>
 					</div>
 				</section>
+				
 				<div class="divider"></div>
-				<!-- Spacial products section -->
+
+				<!-- Most requested products section -->
 				<section class="spacial-products">
 					<div class="spacial-products-head">
-						<h2>منتجات مميزة</h2>
-						<a href="#">جميع المنتجات</a>
+						<h2>المنتجات الأكثر طلبًا</h2>
 					</div>
 					<div class="products-grid">
 						<!-- product -->
 						<div class="product">
 							<div class="right-col">
 								<div class="product-img">
-									<img src="./assets/img/products/meat.png" alt="product image">
+									<img src="./assets/img/products/pineapple.png" alt="product image">
 								</div>
 								<div class="product-info">
-									<h4 class="product-info-title">لحم الضمأن</h4>
+									<h4 class="product-info-title">اناناس طبيعي</h4>
 									<span class="product-info-unit">كيلو جرام</span>
 									<div class="product-info-price">
-										<span class="price">128</span>
+										<span class="price">32</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/kiwi.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">كيوي</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">17</span>
 										<span class="currency">ر.س</span>
 									</div>
 								</div>
@@ -656,6 +695,71 @@
 								</button>
 							</div>
 						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/meat.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">لحم الضمأن</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">128</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/mango-2.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title"> مانجو </h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">27</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+					
 						<!-- product -->
 						<div class="product">
 							<div class="right-col">

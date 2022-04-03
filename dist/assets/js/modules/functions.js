@@ -226,8 +226,12 @@ export function paginationFunctionality() {
 export function filterBox() {
 	const openCloseFilterBtn = get(".open-close-filter-box");
 	const filterBox = get(".filter-content");
+	const viewResultBtn = get(".view-result");
 	openCloseFilterBtn.on("click", () => {
 		filterBox.classList.toggle("open");
+	});
+	viewResultBtn.on("click", () => {
+		filterBox.classList.remove("open");
 	});
 }
 

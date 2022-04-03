@@ -1,0 +1,22 @@
+@use "../../helpers/variables" as var;
+@use "../../helpers/mixins" as *;
+
+.dashboard-wrapper {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+	@include for-tablet-up {
+		grid-template-columns: 200px 1fr;
+	}
+	@include for-laptop-up {
+		grid-template-columns: 300px 1fr;
+	}
+	&-sidebar {
+		background: var.$primary-clr;
+		height: 100vh;
+	}
+	&-content {
+		height: 100vh;
+	}
+}

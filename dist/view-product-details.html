@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="./assets/css/style.css" />
-		<title>Search Result</title>
+		<title>Product details 2</title>
 	</head>
-	<body data-page="search-result">
+	<body data-page="product-details">
 		<!-- Loader -->
 		<div class="spin-loader"></div>
 		<script>
@@ -36,7 +36,7 @@
 						<a href="#"><img src="./assets/icons/shoping-card-icon.svg" /> عربة التسوق</a>
 					</li>
 				</ul>
-				<a href="./signup.html" class="button">انضم الينا</a>
+				<a class="button"><img class="me-2" src="./assets/icons/user-icons.svg" />هشام محمد</a>
 			</div>
 			<div class="select-lang nav-lang">
 				<div class="selected-lang">
@@ -56,31 +56,10 @@
 		<!-- End Navigation -->
 
 		<div class="container-xl">
-			<!-- Start header area -->
-			<header class="header">
-				<!-- Main slider -->
-				<div class="swiper main-slider">
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-1.png" alt="Hero vector" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-2.png" alt="Hero vector" />
-						</div>
-						<div class="swiper-slide">
-							<img src="./assets/img/main-slider-bg-3.png" alt="Hero vector" />
-						</div>
-					</div>
-					<div class="swiper-pagination"></div>
-				</div>
-			</header>
-			<!-- End header area -->
-
 			<!-- Start main area -->
 			<main class="main">
 				<!-- Search section -->
-				<div class="search-area">
+				<div class="search-area" style="margin-top: 5rem;">
 					<div class="input-search">
 						<input type="text" placeholder="بحت" />
 						<button class="button search-btn">
@@ -140,44 +119,179 @@
 					</div>
 				</div>
 
-				<!-- Search products section -->
-				<section class="search-products">
-					<div class="search-products-head">
-						<h2> نتائج البحث لـ " <span>فواكة</span> " 61 منتجات</h2>
-						<div class="sort-dropdown-label">
-							<span> ترتيب حسب السعر : </span>
-							<select class='dropdown'>
-								<option selected>من الأقل للأعلى</option>
-								<option>  للأعلى الأقل </option>
-							</select>
-						</div>
-						<div class="select-address">
-							<span class="label">انت تتسوق على عنوان</span>
-							<div class="dropdown-box">  
-								<div class="selected-item">
-									<span>الدمام - حي طيبة</span>
-									<img src="./assets/icons/arrow-down-fill.svg" />
+				<!-- product details -->
+				<div class="product-details">
+					<div class="row">
+						<div class="col-lg-5 mb-4 mb-lg-0">
+							<div class="product-slides">
+								<img class="product-active-slide" src="./assets/img/products/product-details-mango.png" alt="product" />
+								<div class="product-slides-items">
+									<img class="active" src="./assets/img/products/product-details-mango.png" alt="product" />
+									<img src="https://images.unsplash.com/photo-1582655299221-2b6bff351df0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuZ298ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="product" />
+									<img src="https://media.istockphoto.com/photos/mango-isolated-picture-id522747442?b=1&k=20&m=522747442&s=170667a&w=0&h=DyeX2sceahh2KBk5BByyUu3WlwbrSd1iQu-T42iKYys=" alt="product" />
+									<img src="https://media.istockphoto.com/photos/tropical-fruits-sliced-mangos-in-a-wooden-plate-on-a-table-in-rustic-picture-id1160199541?b=1&k=20&m=1160199541&s=170667a&w=0&h=1oyjHZZRSwmCswDkvGBYzNRGjp_H5qfuIqfvjcqHnWg=" alt="product" />
+									<img src="https://media.istockphoto.com/photos/woman-cutting-a-mango-picture-id1327235209?b=1&k=20&m=1327235209&s=170667a&w=0&h=tAYJGCoB1EWUF4MVO6ghN1vRHJAYG_tpSn0E-9BdpUQ=" alt="product" />
 								</div>
-								<div class="dropdown-content left">
-									<ul class="dropdown-list">
-										<li class="dropdown-item item-selected">الدمام - حي طيبة</li>
-										<li class="dropdown-item">الدمام - ملك الشاورما</li>
-										<li class="dropdown-item"> الظهران - لحوم الطازج </li>
-									</ul>
-									<div class="dropdown-footer">
-										<div class="checkbox-group"> 
-											<input type="checkbox" id="view-all-products" />
-											<label for="view-all-products">عرض منتجات كل الفروع</label>
-										</div>  
-										<button class="button button-outline">
-											<img class="me-1" src="./assets/icons/pencil.svg" />
-											إدارة الفروع
-										</button>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="product-content">
+								<div class="how-many-kg-available">
+									متوفر 961 كيلو
+								</div>
+								<div class="product-content-block">
+									<h1 class="product-title">مانجو باكستاني</h1>
+									<div class="product-price">
+										<span class="price">49.50</span>  
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+								<div class="product-number">رمز المنتج <span>16574</span></div>
+								<div class="product-content-description">
+									<h6>التفاصيل:</h6>
+									<p>مانجو باكستاني اصفر اللون حلو المذاق، مناسب للأكل والعصير بنفس الوقت </p>
+								</div>
+								<div class="product-availability">
+									<span>متوفر في فرع:</span>
+									<select class="dropdown">
+										<option value="1" selected>الدمام - حي طيبة</option>
+										<option value="2">الدمام - ملك الشاورما</option>
+										<option value="3">الظهران - لحوم الطازج</option>
+									</select>
+								</div>
+								<h6>الكمية:</h6>
+								<div class="product-quantity add-product-to-card">
+									<div class="quantity-box">
+										<div class="increase-btn">
+											<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+										</div>
+										<div class="kg-count">0</div>
+										<div class="decrease-btn">
+											<img src="./assets/icons/min-icon.svg" alt="plus icon">
+										</div>
+									</div>
+									<button class="button" id="add-to-card-btn"> 
+										<img class="me-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+										<span>اضف للسلة</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="divider" style="margin: 2.5rem 0;"></div>
+				<!-- Spacial products section -->
+				<section class="spacial-products">
+					<div class="spacial-products-head">
+						<h2>منتجات مشابهة</h2>
+						<a href="#">جميع المنتجات</a>
+					</div>
+					<div class="products-grid">
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/strawberry.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">فراولة</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">16</span>
+										<span class="currency">ر.س</span>
 									</div>
 								</div>
 							</div>
-							<span class="address-note">قد تختلف المنتجات المعروضة حسب عنوان الشحن</span>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
 						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/red-apple.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">تفاح أحمر</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">28</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+						<!-- product -->
+						<div class="product">
+							<div class="right-col">
+								<div class="product-img">
+									<img src="./assets/img/products/mango.png" alt="product image">
+								</div>
+								<div class="product-info">
+									<h4 class="product-info-title">مانجو باكستاني</h4>
+									<span class="product-info-unit">كيلو جرام</span>
+									<div class="product-info-price">
+										<span class="price">128</span>
+										<span class="currency">ر.س</span>
+									</div>
+								</div>
+							</div>
+							<!-- add to card CTA -->
+							<div class="left-col add-product-to-card">
+								<div class="quantity-box">
+									<div class="increase-btn">
+										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
+									</div>
+									<div class="kg-count">0</div>
+									<div class="decrease-btn">
+										<img src="./assets/icons/min-icon.svg" alt="plus icon">
+									</div>
+								</div>
+								<button class="button"> 
+									<span>اضف للسلة</span>
+									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="divider"></div>
+				<!-- Most requested products section -->
+				<section class="spacial-products">
+					<div class="spacial-products-head">
+						<h2>المنتجات الأكثر طلبًا</h2>
 					</div>
 					<div class="products-grid">
 						<!-- product -->
@@ -280,202 +394,10 @@
 						<div class="product">
 							<div class="right-col">
 								<div class="product-img">
-									<img src="./assets/img/products/mango-2.png" alt="product image">
+									<img src="./assets/img/products/meat.png" alt="product image">
 								</div>
 								<div class="product-info">
-									<h4 class="product-info-title"> مانجو </h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">27</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/mango.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title">مانجو باكستاني</h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">128</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/pineapple.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title">اناناس طبيعي</h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">32</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/kiwi.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title">كيوي</h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">17</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/red-apple.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title">تفاح أحمر</h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">28</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/mango-2.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title"> مانجو </h4>
-									<span class="product-info-unit">كيلو جرام</span>
-									<div class="product-info-price">
-										<span class="price">27</span>
-										<span class="currency">ر.س</span>
-									</div>
-								</div>
-							</div>
-							<!-- add to card CTA -->
-							<div class="left-col add-product-to-card">
-								<div class="quantity-box">
-									<div class="increase-btn">
-										<img src="./assets/icons/plus-icon.svg" alt="plus icon">
-									</div>
-									<div class="kg-count">0</div>
-									<div class="decrease-btn">
-										<img src="./assets/icons/min-icon.svg" alt="plus icon">
-									</div>
-								</div>
-								<button class="button"> 
-									<span>اضف للسلة</span>
-									<img class="ms-1" src="./assets/icons/shopping-cart-white.svg" alt="shop card icon">
-								</button>
-							</div>
-						</div>
-						<!-- product -->
-						<div class="product">
-							<div class="right-col">
-								<div class="product-img">
-									<img src="./assets/img/products/mango.png" alt="product image">
-								</div>
-								<div class="product-info">
-									<h4 class="product-info-title">مانجو باكستاني</h4>
+									<h4 class="product-info-title">لحم الضمأن</h4>
 									<span class="product-info-unit">كيلو جرام</span>
 									<div class="product-info-price">
 										<span class="price">128</span>
@@ -532,6 +454,7 @@
 								</button>
 							</div>
 						</div>
+					
 						<!-- product -->
 						<div class="product">
 							<div class="right-col">
@@ -564,27 +487,9 @@
 								</button>
 							</div>
 						</div>
-					</div>
-					<div class="search-products-footer">
-						<!-- pagination navigation -->
-						<div class="pagination-nav">
-							<div class="prev">
-								<img src="./assets/icons/right-arrow.svg" alt="prev" />
-							</div>
-							<ul class="pagination">
-								<li class="padg-item active" data-index="1">1</li>
-								<li class="padg-item" data-index="2">2</li>
-								<li class="padg-item" data-index="3">3</li>
-							</ul>
-							<div class="next">
-								<img src="./assets/icons/left-arrow.svg" alt="next" />
-							</div>
-							<button class="button button-sm last">الأخيرة</button>
-						</div>
-						<h3>عرض 71 الى 33 من 902 (51 صفحة)</h3>
 					</div>
 				</section>
-				<div class="divider"></div>
+				<div class="divider" style="margin-top: 0;"></div>
 				<!-- Spacial products section -->
 				<section class="spacial-products">
 					<div class="spacial-products-head">
@@ -725,7 +630,6 @@
 		<!-- End footer area -->
 
 		<!-- scripts -->
-		<script defer src="./assets/js/vendor/swiper.min.js"></script>
 		<script defer src="./assets/js/app.js" type="module"></script>
 	</body>
 </html>

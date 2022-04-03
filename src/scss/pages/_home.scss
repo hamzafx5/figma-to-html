@@ -5,7 +5,6 @@
 	margin: 2rem 0 3rem;
 	.main-slider {
 		width: 100%;
-		aspect-ratio: 2.8/1;
 	}
 }
 
@@ -18,6 +17,24 @@
 		transition: width 300ms ease;
 		&-active {
 			background: var.$primary-clr;
+		}
+	}
+}
+
+.warning-block {
+	padding: 10px 1rem;
+	background-color: rgba(255, 178, 96, 0.15);
+	border-radius: 10px;
+	margin-bottom: 2rem;
+	@include for-down(916px) {
+		& > div {
+			display: block;
+			max-width: max-content;
+			margin: 1rem 0;
+		}
+		& > span {
+			display: block;
+			margin: 0 !important;
 		}
 	}
 }
@@ -55,10 +72,12 @@
 			opacity: 0;
 			visibility: hidden;
 			transition: 400ms ease;
+			pointer-events: none;
 			&.open {
 				transform: translateY(0);
 				opacity: 1;
 				visibility: visible;
+				pointer-events: inherit;
 			}
 			h6 {
 				color: var.$primary-clr;
@@ -116,6 +135,10 @@
 	}
 }
 
+#home-logged .categories {
+	margin-bottom: 5rem;
+}
+
 .categories {
 	&-grid {
 		width: 100%;
@@ -171,15 +194,33 @@
 .search-products {
 	margin-bottom: 5rem;
 	&-head {
-		margin-bottom: 1.5rem;
+		margin-bottom: 3rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		h2 span {
-			color: var.$primary-clr;
-		}
-		& > * {
+		flex-wrap: wrap;
+		h2 {
 			margin: 0;
+			span {
+				color: var.$primary-clr;
+			}
+		}
+		.select-address {
+			@include for-down(1040px) {
+				margin: 1rem auto;
+			}
+			position: relative;
+			display: flex;
+			align-items: center;
+			.label {
+				margin-left: 10px;
+			}
+			.address-note {
+				position: absolute;
+				bottom: -28px;
+				right: 0;
+				font-size: 85%;
+			}
 		}
 	}
 }
